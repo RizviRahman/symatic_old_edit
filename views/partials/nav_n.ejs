@@ -1,0 +1,61 @@
+<header class="navigation fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="\"><img src="./images/1.png" alt="Company Logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+      aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse text-center" id="navigation">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item <%= (opt=='home'? 'active' : '')%>">
+          <a class="nav-link" href="\">Home</a>
+        </li>
+        <li class="nav-item <%= (opt=='about'? 'active' : '')%>">
+          <a class="nav-link" href="\about">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="energy.html">Energy</a>
+            <a class="dropdown-item" href="environment.html">Environment</a>
+            <a class="dropdown-item" href="it.html">IT</a>
+            <a class="dropdown-item" href="civil.html">Civil Infrastructure</a>
+          </div>
+        </li>
+        <li class="nav-item <%= (opt=='job-offers'? 'active' : '')%>">
+          <!-- <a class="nav-link" href="career.html">Job Offers</a> -->
+          <a class="nav-link" href="\job-offers">Job Offers</a>
+        </li>
+        <li class="nav-item <%= (opt=='contact'? 'active' : '')%>">
+          <a class="nav-link" href="\contact">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="\login">Login</a>
+        </li>
+        <li class="nav-item">
+          <header class="main-header">
+            <div class="switch">
+              <div class="current">
+                <span>EN</span>
+                <em class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><title></title>
+              <g fill="#FFFFFF">
+                  <path d="M5 8l4 4 4-4z"></path>
+              </g>
+          </svg></em>
+              </div>
+              <div class="options">
+                <ul class="options-list">
+                  <li data-lang="en">English</li>
+                  <a href="indexFR.html"><li data-lang="fr">French</li></a>
+                  <li data-lang="pt">Portuguese</li>
+                </ul>
+                <div id="trans-circle"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"> <g id="circle" fill="none" fill-rule="evenodd"> <circle id="bg" cx="60" cy="60" r="60" fill="#FFFFFF"/> </g> </svg>
+              </div>
+            </div>
+          </header>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

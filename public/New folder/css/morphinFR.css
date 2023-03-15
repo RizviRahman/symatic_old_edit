@@ -1,0 +1,440 @@
+/* //////////////////////////// */
+/* Morphin text animation style */
+/* //////////////////////////// */
+.animations_container_pencode{
+    display: flex;
+    position: absolute;
+    top: 14rem;
+    left: 2rem;
+    width: 100%;
+    align-items: center;
+}
+
+.morphin_container{
+    width: 40%;
+}
+#container {
+    margin: auto;
+    height: 80pt;
+    filter: url(#threshold) blur(0.6px);
+}
+
+#text1,
+#text2 {
+    position: absolute;
+    width: 100%;
+    display: inline-block;
+    justify-content: left;
+    align-items: center;
+    font-family: "Raleway", sans-serif;
+    top: 11rem;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    user-select: none;
+    font-size: 1.5vw;
+    left: -15px;
+  
+}
+
+
+
+/* //////////////////////////// */
+/* slider text animation style */
+/* //////////////////////////// */
+
+.slider_container_coepen>h1 {
+  transform: translate(0%, -5%);
+    color: #333;
+    font-family: tahoma;
+    font-size: 2.5rem;
+    font-weight: 100;
+    line-height: 1.5;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    width: 550px;
+    margin-top: -1rem;
+    left: 6rem;
+
+  }
+  
+  .slider_container_coepen>h1 span {
+    margin-left: 40px;
+  }
+  
+  .message {
+    
+    background-color: transparent;
+    color: #1d67a6;
+    display: block;
+    font-weight: 900;
+    overflow: hidden;
+    position: absolute;
+    padding-left: 0.5rem;
+    top: 0.1rem;
+    left: 220px;
+    animation: openclose 10s ease-in-out infinite;
+
+  }
+  
+  .word1, .word2, .word3 {
+    font-family: tahoma;
+  }
+  
+  @keyframes openclose {
+    0% {
+      top: -0rem;
+      width: 0;
+    }
+    5% {
+      width: 0;
+    }
+    15% {
+      width: 230px;
+    }
+    30% {
+      top: -0rem;
+      width: 230px;
+    }
+    33% {
+      top: -0rem;
+      width: 0;
+    }
+    35% {
+      top: -0rem;
+      width: 0;
+    }
+    38% {
+      top: -3.8rem;
+      
+    }
+    48% {
+      top: -3.8rem;
+      width: 190px;
+    }
+    62% {
+      top: -3.8rem;
+      width: 190px;
+    }
+    66% {
+      top: -3.8rem;
+      width: 0;
+      text-indent: 0;
+    }
+    71% {
+      top: -7.5rem;
+      width: 0;
+      text-indent: 5px;
+    }
+    86% {
+      top: -7.5rem;
+      width: 285px;
+    }
+    95% {
+      top: -7.5rem;
+      width: 285px;
+    }
+    98% {
+      top: -7.5rem;
+      width: 0;
+      text-indent: 5px;
+    }
+    100% {
+      top: 0;
+      width: 0;
+      text-indent: 0;
+    }
+  }
+
+
+  
+/* //////////////////////////// */
+/* Responsiveness of both animations */
+/* //////////////////////////// */
+  @media only screen and (max-width: 768px){
+    .slider_container_coepen>h1 {
+        color: #333;
+        font-family: tahoma;
+        font-size: 1.6rem;
+        font-weight: 100;
+        line-height: 1.5;
+        text-transform: uppercase;
+        white-space: nowrap;
+        overflow: hidden;
+        position: relative;
+        width: 500px;
+
+        
+      }
+      .message {
+        background-color: transparent;
+        color: #1d67a6;
+        display: block;
+        font-weight: 900;
+        overflow: hidden;
+        position: absolute;
+        padding-left: 0.5rem;
+        top: 0.2rem;
+        left: 130px;
+        animation: openclose 10s ease-in-out infinite;
+      }
+  }
+
+  @media only screen and (max-width: 600px){
+    .animations_container_pencode{
+        display: flex;
+        position: absolute;
+        top: 10rem;
+        left: 0rem;
+        padding: 2rem;
+        width: 100%;
+        align-items: center;
+    }
+    #text1,
+#text2{
+  font-size: 1.5rem;
+  top: 10.2rem;
+}
+
+@media only screen and (min-width: 300px){
+  .slider_container_coepen>h1 {
+      color: #333;
+      font-family: tahoma;
+      font-size: 1.6rem;
+      font-weight: 100;
+      line-height: 1.5;
+      white-space: nowrap;
+      overflow: hidden;
+      position: relative;
+      width: 500px;
+      transform: translate(-40%, -100%);
+      
+    }
+    .message {
+      background-color: transparent;
+      color: #1d67a6;
+      display: block;
+      font-weight: 900;
+      overflow: hidden;
+      position: absolute;
+      padding-left: 0.5rem;
+      top: 0.2rem;
+      left: 130px;
+      animation: openclose 10s ease-in-out infinite;
+    }
+}
+
+@media only screen and (min-width: 300px){
+  .animations_container_pencode{
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 10rem;
+      left: 0rem;
+      padding: 2rem;
+      width: 100%;
+      align-items: center;
+  }
+  #text1,
+#text2{
+  left: 0rem;
+font-size: 1.5rem;
+top: 3rem;
+}
+
+  .slider_container_coepen>h1 span {
+    margin-left: 0px;
+    }
+    .message {
+      background-color: transparent;
+      color: #1d67a6;
+      display: block;
+      font-weight: 900;
+      overflow: hidden;
+      position: absolute;
+      padding-left: 0.5rem;
+      top: 0.2rem;
+      left: 125px;
+      animation: openclose 10s ease-in-out infinite;
+    }
+    @keyframes openclose {
+      0% {
+        top: -0rem;
+        width: 0;
+      }
+      5% {
+        width: 0;
+      }
+      15% {
+        width: 230px;
+      }
+      30% {
+        top: -0rem;
+        width: 230px;
+      }
+      33% {
+        top: -0rem;
+        width: 0;
+      }
+      35% {
+        top: -0rem;
+        width: 0;
+      }
+      38% {
+        top: -2.1rem;
+        
+      }
+      48% {
+        top: -2.1rem;
+        width: 190px;
+      }
+      62% {
+        top: -2.1rem;
+        width: 190px;
+      }
+      66% {
+        top: -2.1rem;
+        width: 0;
+        text-indent: 0;
+      }
+      71% {
+        top: -4.2rem;
+        width: 0;
+        text-indent: 5px;
+      }
+      86% {
+        top: -4.2rem;
+        width: 285px;
+      }
+      95% {
+        top: -4.2rem;
+        width: 285px;
+      }
+      98% {
+        top: -4.2rem;
+        width: 0;
+        text-indent: 5px;
+      }
+      100% {
+        top: 0;
+        width: 0;
+        text-indent: 0;
+      }
+    }
+    .morphin_container {
+      width: 100vw;
+      height: 10rem;
+  }
+  h9{
+    transform: translate(544%, -1010%);
+  }
+    .slider_container_coepen>h1 {
+      color: #333;
+      font-family: tahoma;
+      font-size: 1.4rem;
+      font-weight: 100;
+      line-height: 1.5;
+      text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+      position: relative;
+      width: 100vw;
+      margin-bottom: 0rem;
+      left: 12rem;
+    }
+}
+
+@media only screen and (min-width: 300px){
+
+  .slider_container_coepen>h1 {
+      margin-left: 0rem;
+      margin-top: 0rem;
+      width: 60vw;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .animations_container_pencode{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 13rem;
+    left: 0rem;
+    width: 100%;
+    align-items: center;
+}
+.slider_container_coepen>h1 {
+  margin-left: 10rem;
+  margin-top: 0rem;
+}
+.morphin_container{
+  width: 100vw;
+  height: 10rem;
+  overflow: hidden;
+}
+.slider_container_coepen{
+  width: 100vw;
+}
+}
+@media only screen and (max-width: 480px){
+  .slider_container_coepen{
+    padding-left: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slider_container_coepen>h1 span{
+    margin-left: 0rem;
+    }
+}
+@media only screen and (max-width: 420px){
+  h9{
+    transform: translate(610%, -1010%);
+  }
+  .slider_container_coepen>h1 {
+    margin-left: -6rem;
+    margin-top: 0rem;
+  }
+}
+@media only screen and (max-width: 400px){
+  h9{
+    transform: translate(565%, -1010%);
+  }
+}
+@media only screen and (max-width: 380px){
+  h9{
+    transform: translate(540%, -1010%);
+  }
+  .slider_container_coepen{
+    padding-left: 0rem;
+  }
+  .slider_container_coepen>h1 {
+    width: 80vw;
+    margin-top: 0rem;
+    margin-left: 0rem;
+    padding-left: 0rem;
+}
+.message{
+  left: 140px;
+}
+.slider_container_coepen>h1 span{
+margin-left: 0rem;
+}
+.slider_container_coepen>h1 {
+  margin-left: 0rem;
+  margin-top: 0rem;
+}
+}
+
+
+
+@media only screen and (max-width: 360px){
+  h9{
+    transform: translate(515%, -1010%);
+  }
+  .slider_container_coepen>h1 {
+    margin-left: 0rem;
+    margin-top: 0rem;
+  }
+}
+  }
