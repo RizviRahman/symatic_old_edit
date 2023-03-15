@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <title>Symetic Ing | IT</title>
+  <link rel="icon" href="images/logoTitle.png">
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+  <!-- venobox css -->
+  <link rel="stylesheet" href="plugins/venobox/venobox.css">
+  <!-- card slider -->
+  <link rel="stylesheet" href="plugins/card-slider/css/style.css">
+
+  <!-- Main Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+  
+  <!--Favicon-->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+  <style>
+    a:hover {
+        color: #5d5f5d;
+      }
+
+      @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,900|Noto+Sans:400,400i,700&subset=latin-ext');
+:root {
+  font-size: 100%;
+  --base-font-size: calc(15px + .5vw);
+  --ratio: 1.18;
+  --h6: calc(var(--base-font-size) * var(--ratio));
+  --h5: calc(var(--h6) * var(--ratio));
+  --h4: calc(var(--h5) * var(--ratio));
+  --h3: calc(var(--h4) * var(--ratio));
+  --h2: calc(var(--h3) * var(--ratio));
+  --h1: calc(var(--h2) * var(--ratio));
+}
+
+a{
+  color: #313436;
+}
+a :hover{
+  color: black;
+}
+#content {
+  max-width: 48rem;
+  margin: 0 auto;
+  text-align: left;
+  padding: 1rem 2rem;
+}
+#content:not(.en) [data-lang='en'], #content:not(.no) [data-lang='no'], #content:not(.sv) [data-lang='sv'], #content:not(.ru) [data-lang='ru'], #content:not(.es) [data-lang='es'] {
+  display: none;
+}
+#content.en [data-lang='en'], #content.no [data-lang='no'], #content.sv [data-lang='sv'], #content.ru [data-lang='ru'], #content.es [data-lang='es'] {
+  display: block;
+}
+h1 {
+  font-family: 'Playfair Display', 'Noto Sans', Arial, sans-serif;
+  font-weight: 900;
+  font-size: var(--h1);
+  line-height: calc(var(--h1) * 1.2);
+}
+h2 {
+  font-size: var(--h2);
+  line-height: calc(var(--h2) * 1.2);
+}
+h3 {
+  font-size: var(--h3);
+  line-height: calc(var(--h3) * 1.3);
+}
+h4 {
+  font-size: var(--h4);
+  line-height: calc(var(--h4) * 1.3);
+}
+h5 {
+  font-size: var(--h5);
+  line-height: calc(var(--h5) * 1.4);
+}
+h6 {
+  font-size: var(--h6);
+  line-height: calc(var(--h6) * 1.5);
+}
+.main-header {
+  color: #FFFFFF;
+  height: 56px;
+  display: flex;
+  padding: 0 2rem;
+}
+.main-header h1 {
+  font-size: 1.25rem;
+  line-height: 1.35;
+  font-family: 'Noto Sans', Arial, sans-serif;
+}
+.main-header .switch {
+  margin-left: auto;
+}
+.switch {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.current {
+  text-transform: uppercase;
+  height: 42px;
+  position: relative;
+  z-index: 1;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 42px;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 0.2s ease-out;
+  border-radius: 3px;
+  padding: 0 0.2em 0 0.7em;
+}
+.current span {
+  display: inline-block;
+  line-height: 1;
+  padding: 0.7em 0.2em 0 0;
+}
+.current .arrow {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+.current:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.options {
+  position: absolute;
+  right: 0;
+  top: 0.6em;
+  z-index: 0;
+  opacity: 0;
+  transition: all 0.36s ease-out;
+  display: none;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  transform: translate(30%, 30%);
+}
+
+@media screen and (max-width: 640px) {
+  .options {
+  position: absolute;
+  right: 0;
+  top: 0.6em;
+  z-index: 0;
+  opacity: 0;
+  transition: all 0.36s ease-out;
+  display: none;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  transform: translate(50%, -50%);
+}
+}
+
+
+.switch.show-options .options {
+  display: block;
+  z-index: 5;
+}
+.switch.anim-options .options {
+  opacity: 1;
+}
+.switch.show-shadow .options {
+  box-shadow: 0 2px 12px -4px rgba(0, 0, 0, 0.4);
+}
+.options-list {
+  color: #313436;
+  margin: 0;
+  padding: 0.4rem 0.8em;
+  position: relative;
+  z-index: 5;
+}
+.options-list li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding: 0.75em;
+  border-bottom: 1px solid #E1E4E6;
+  transform: translateX(10px);
+  transition: all 0.24s ease-out;
+  transition-delay: 0.1s;
+  opacity: 0;
+  font-size: 1rem;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+.options-list li:last-child {
+  border-bottom: none;
+}
+.options-list li:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.options-list li:nth-child(2) {
+  transition-delay: 0.15s;
+}
+.options-list li:nth-child(3) {
+  transition-delay: 0.2s;
+}
+.options-list li:nth-child(4) {
+  transition-delay: 0.25s;
+}
+.options-list li:nth-child(5) {
+  transition-delay: 0.3s;
+}
+.options-list li.selected {
+  color: #3498DB;
+}
+.switch.anim-options .options-list li {
+  transform: translateX(0);
+  opacity: 1;
+}
+#trans-circle {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  z-index: 1;
+  transition: all 0.4s ease-out;
+  transform: scale(0.5);
+  overflow: hidden;
+}
+#trans-circle svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+.switch.anim-options #trans-circle {
+  transform: scale(9);
+}
+    </style>
+
+<header class="navigation fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="indexFR.html"><img src="./images/1.png" alt="Company Logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+      aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse text-center" id="navigation">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="indexFR.html">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="aboutFR.html">Notre Entreprise</a>
+        </li>
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catégories</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="energyFR.html">Énergie</a>
+            <a class="dropdown-item" href="environmentFR.html">Environnement</a>
+            <a class="dropdown-item" href="itFR.html">IT</a>
+            <a class="dropdown-item" href="civilFR.html">Infrastructure Civil</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="career.html">Offres D'Emploi</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contactFR.html">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="loginFR.html">Login</a>
+        </li>
+        <li class="nav-item">
+          <header class="main-header">
+            <div class="switch">
+              <div class="current">
+                <span>FR</span>
+                <em class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><title>ic_arrow_drop_down_18px</title>
+              <g fill="#FFFFFF">
+                  <path d="M5 8l4 4 4-4z"></path>
+              </g>
+          </svg></em>
+              </div>
+              <div class="options">
+                <ul class="options-list">
+                  <li data-lang="fr">French</li>
+                  <a href="index.html"><li data-lang="en">English</li></a>
+                  <li data-lang="pt">Portuguese</li>
+                </ul>
+                <div id="trans-circle"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"> <g id="circle" fill="none" fill-rule="evenodd"> <circle id="bg" cx="60" cy="60" r="60" fill="#FFFFFF"/> </g> </svg>
+              </div>
+            </div>
+          </header>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+<!-- page-title -->
+<section class="page-title bg-cover" data-background="images/backgrounds/page-title2.jpg">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="display-1 text-white font-weight-bold font-primary">IT</h1>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /page-title -->
+
+<section class="section bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div id="accordion">
+          <!-- accordion item -->
+          <div class="card mb-4 rounded-0 border-0">
+            <div class="card-header rounded-0 bg-white border p-0 border-0">
+              <a class="card-link h4 d-flex tex-dark mb-0 py-3 px-4 justify-content-between" data-toggle="collapse" href="#accordion1">
+                <span>Infrastructure et Production</span> <i class="ti-plus text-right"></i>
+              </a>
+            </div>
+            <div id="accordion1" class="collapse" data-parent="#accordion">
+              <div class="card-body font-secondary text-color">- Businesse Intelligence<p></p>- Architecte<p></p>- Big Data
+                
+                </div>
+            </div>
+          </div>
+          <!-- accordion item -->
+          <div class="card mb-4 rounded-0 border-0">
+            <div class="card-header rounded-0 bg-white border p-0 border-0">
+              <a class="card-link h4 d-flex tex-dark mb-0 py-3 px-4 justify-content-between" data-toggle="collapse" href="#accordion2">
+                <span>Cybersécurité</span> <i class="ti-plus text-right"></i>
+              </a>
+            </div>
+            <div id="accordion2" class="collapse" data-parent="#accordion">
+              <div class="card-body font-secondary text-color">- Commerce Internationale<p></p>- Edge Computing<p></p>- IoT Industriel<p></p>- Logistique
+                
+                </div>
+            </div>
+          </div>
+          <!-- accordion item -->
+          <div class="card mb-4 rounded-0 border-0">
+            <div class="card-header rounded-0 bg-white border p-0 border-0">
+              <a class="card-link h4 d-flex tex-dark mb-0 py-3 px-4 justify-content-between" data-toggle="collapse" href="#accordion3">
+                <span>Informatique</span> <i class="ti-plus text-right"></i>
+              </a>
+            </div>
+            <div id="accordion3" class="collapse" data-parent="#accordion">
+              <div class="card-body font-secondary text-color">- Software Développement<p></p>- Fullstack Développement<p></p>- Moe/Moa
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- footer -->
+<footer class="bg-secondary position-relative">
+  <img src="images/backgrounds/map.png" class="img-fluid overlay-image" alt="">
+  <div class="section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-3 col-6">
+          <h4 class="text-white mb-5">Liens Utiles</h4>
+          <ul class="list-unstyled">
+            <li><a href="careerFR.html" class="text-light d-block mb-3">Offres D'Emploi</a></li>
+            <li><a href="contactFR.html" class="text-light d-block mb-3">Contact</a></li>
+            <li><a href="aboutFR.html" class="text-light d-block mb-3">Notre Entreprise</a></li>
+            <li><a href="privacy.html" class="text-light d-block mb-3">Politique de Confidentialité</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-6">
+          <h4 class="text-white mb-5">Entreprise</h4>
+          <ul class="list-unstyled">
+            <li><a href="mailto:contact@symetic-ing.com" class="text-light d-block mb-3"><i class="ti-email"></i> contact@symetic-ing.com</a></li>
+            <li><a class="text-light d-block mb-3"><i class="ti-mobile"></i> +33 1 85 40 19 16</a></li>
+            <li><a href="https://symetic-ing.com" class="text-light d-block mb-3"><i class="ti-world"></i> www.symetic-ing.com</a></li>
+            <li><a class="text-light d-block mb-3"><i class="ti-map-alt"></i> 2 Rue Georges Méliés, 78390 Bois-d'Arcy France</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <div class="bg-white p-4">
+            <h3>Contactez-nous</h3>
+            <form action="#">
+              <input type="text" id="name" name="name" class="form-control mb-4 px-0" placeholder="Nom">
+              <input type="text" id="name" name="name" class="form-control mb-4 px-0" placeholder="Email">
+              <textarea name="message" id="message" class="form-control mb-4 px-0" placeholder="Message"></textarea>
+              <button class="btn btn-primary" type="submit">Envoyer</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pb-4">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-left">
+          <p class="text-light mb-0">Copyright &copy; 2023 Symetic Ing
+          </p>
+        </div>
+        <div class="col-md-6">
+          <ul class="list-inline text-md-right text-center">
+            <li class="list-inline-item"><a class="d-block p-3 text-white" href="#"><i class="ti-facebook"></i></a></li>
+            <li class="list-inline-item"><a class="d-block p-3 text-white" href="https://www.linkedin.com/company/symetic-ingenierie/"><i class="ti-linkedin"></i></a></li>
+            <li class="list-inline-item"><a class="d-block p-3 text-white" href="mailto:contact@symetic-ing.com"><i class="ti-email"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- /footer -->
+
+<!-- jQuery -->
+<script src="plugins/jQuery/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<!-- slick slider -->
+<script src="plugins/slick/slick.min.js"></script>
+<!-- venobox -->
+<script src="plugins/venobox/venobox.min.js"></script>
+<!-- shuffle -->
+<script src="plugins/shuffle/shuffle.min.js"></script>
+<!-- apear js -->
+<script src="plugins/counto/apear.js"></script>
+<!-- counter -->
+<script src="plugins/counto/counTo.js"></script>
+<!-- card slider -->
+<script src="plugins/card-slider/js/card-slider-min.js"></script>
+<!-- google map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"></script>
+<script src="plugins/google-map/gmap.js"></script>
+
+<!-- Main Script -->
+<script src="js/script.js"></script>
+
+<!-- Language Switch -->
+<script>
+  let el = $('.switch');
+let cur = el.find('.current');
+let options = el.find('.options li');
+let content = $('#content');
+
+// Open language dropdown panel
+
+el.on('click', function(e) {
+  el.addClass('show-options');
+  
+  setTimeout(function() {
+    el.addClass('anim-options');
+  }, 50);
+  
+  setTimeout(function() {
+    el.addClass('show-shadow');
+  }, 200);
+});
+
+
+// Close language dropdown panel
+
+options.on('click', function(e) {
+  e.stopPropagation();
+  el.removeClass('anim-options');
+  el.removeClass('show-shadow');
+  
+  let newLang = $(this).data('lang');
+  
+  cur.find('span').text(newLang);
+  content.attr('class', newLang);
+  
+  setLang(newLang);
+  
+  options.removeClass('selected');
+  $(this).addClass('selected');
+  
+  setTimeout(function() {
+    el.removeClass('show-options');
+  }, 600);
+});
+
+
+// Save selected options into Local Storage
+
+function getLang() {
+  let lang;
+  if (localStorage.getItem('currentLang') === null) {
+    lang = cur.find('span').text();
+  } else {
+    lang = JSON.parse(localStorage.getItem('currentLang')).toLowerCase();
+  }
+  
+  // console.log(lang);
+
+  cur.find('span').text(lang);
+  options.parent().find(`li[data-lang="${lang}"]`).addClass('selected');
+  
+  content.attr('class', lang);
+}
+
+getLang();
+
+function setLang(newLang) {
+    localStorage.setItem('currentLang', JSON.stringify(newLang).toLowerCase());
+  
+  content.attr('class', newLang);
+  
+  // console.log('New language is: ' + newLang);
+}
+</script>
+
+</body>
+</html>
