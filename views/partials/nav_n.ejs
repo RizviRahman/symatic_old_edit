@@ -14,13 +14,13 @@
         <li class="nav-item <%= (opt=='about'? 'active' : '')%>">
           <a class="nav-link" href="\about">About</a>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown <%= (opt=='category'? 'active' : '')%>"">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="energy.html">Energy</a>
-            <a class="dropdown-item" href="environment.html">Environment</a>
-            <a class="dropdown-item" href="it.html">IT</a>
-            <a class="dropdown-item" href="civil.html">Civil Infrastructure</a>
+            <a class="dropdown-item" href="\energy">Energy</a>
+            <a class="dropdown-item" href="\environment">Environment</a>
+            <a class="dropdown-item" href="\it">IT</a>
+            <a class="dropdown-item" href="\civil">Civil Infrastructure</a>
           </div>
         </li>
         <li class="nav-item <%= (opt=='job-offers'? 'active' : '')%>">
@@ -47,7 +47,7 @@
               <div class="options">
                 <ul class="options-list">
                   <li data-lang="en">English</li>
-                  <a href="indexFR.html"><li data-lang="fr">French</li></a>
+                  <a href="/FR"><li data-lang="fr">French</li></a>
                   <li data-lang="pt">Portuguese</li>
                 </ul>
                 <div id="trans-circle"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"> <g id="circle" fill="none" fill-rule="evenodd"> <circle id="bg" cx="60" cy="60" r="60" fill="#FFFFFF"/> </g> </svg>

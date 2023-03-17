@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Symetic Ing | Notre Entreprise</title>
+  <title>Symetic Ing | Infrastructure Civil</title>
   <link rel="icon" href="../images/logoTitle.png">
 
   <!-- mobile responsive meta -->
@@ -33,11 +33,11 @@
 
 <body>
   <style>
-    p{
-      color: black;
-      text-align: justify;
-    }
-    @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,900|Noto+Sans:400,400i,700&subset=latin-ext');
+    a:hover {
+        color: #e0730c;
+      }
+
+      @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,900|Noto+Sans:400,400i,700&subset=latin-ext');
 :root {
   font-size: 100%;
   --base-font-size: calc(15px + .5vw);
@@ -247,7 +247,7 @@ h6 {
 .switch.anim-options #trans-circle {
   transform: scale(9);
 }
-  </style>
+    </style>
 
 <!-- <header class="navigation fixed-top">
   <nav class="navbar navbar-expand-lg navbar-dark">
@@ -262,10 +262,10 @@ h6 {
         <li class="nav-item">
           <a class="nav-link" href="indexFR.html">Accueil</a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="aboutFR.html">Notre Entreprise</a>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown active">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catégories</a>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="energyFR.html">Énergie</a>
@@ -310,125 +310,117 @@ h6 {
   </nav>
 </header> -->
 
-<%- include('partials/navFR', {user: user, opt: 'aboutFR'}); %>	
+<%- include('partials/navFR', {user: user, opt: 'categoryFR'}); %>	
 
 <!-- page-title -->
-<section class="page-title bg-cover" data-background="../images/backgrounds/bg_about.jpg">
+<section class="page-title bg-cover" data-background="../images/backgrounds/page-title2.jpg">
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">
-        <h1 class="display-1 text-white font-weight-bold font-primary">Symetic Ing</h1>
+        <h1 class="display-1 text-white font-weight-bold font-primary">Infrastructure Civil</h1>
       </div>
     </div>
   </div>
 </section>
 <!-- /page-title -->
 
-<!-- progressbar -->
-<section class="section pb-0">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 mb-4 mb-lg-0">
-        <img src="../images/about/oil-gas.png" alt="about" class="img-fluid">
-      </div>
-      <div class="col-md-6 col-lg-5">
-        <div class="progress-block">
-          <h6 class="text-uppercase">Énergie</h6>
-          <div class="progress">
-            <div class="progress-bar" data-percent="90">
-              <span class="skill-number text-dark font-weight-bold">
-            </div>
-          </div>
-        </div>
-        <div class="progress-block">
-          <h6 class="text-uppercase">Environnement</h6>
-          <div class="progress">
-            <div class="progress-bar" data-percent="80">
-              <span class="skill-number text-dark font-weight-bold">
-            </div>
-          </div>
-        </div>
-        <div class="progress-block">
-          <h6 class="text-uppercase">It</h6>
-          <div class="progress">
-            <div class="progress-bar" data-percent="50">
-              <span class="skill-number text-dark font-weight-bold">
-            </div>
-          </div>
-        </div>
-        <div class="progress-block">
-          <h6 class="text-uppercase">Infrastructure Civil</h6>
-          <div class="progress">
-            <div class="progress-bar" data-percent="90">
-              <span class="skill-number text-dark font-weight-bold">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- /progressbar -->
-
-<!-- video 
-<section class="section pb-0">
+<section class="section bg-light">
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <div class="overlay-secondary video-player">
-          <img src="images/about/video-thumb.jpg" alt="video-thumb" class="img-fluid w-100">
-          <a class="play-icon">
-            <i class="text-center icon-sm icon-box-sm rounded-circle text-white bg-gradient-primary d-block ti-control-play content-center"
-              data-video="https://www.youtube.com/embed/jrkvirglgaQ?autoplay=1">
-              <div class="ripple"></div>
-            </i>
-          </a>
+        <div id="accordion">
+          <!-- accordion item -->
+          <div class="card mb-4 rounded-0 border-0">
+            <div class="card-header rounded-0 bg-white border p-0 border-0">
+              <a class="card-link h4 d-flex tex-dark mb-0 py-3 px-4 justify-content-between" data-toggle="collapse" href="#accordion1">
+                <span>Construction</span> <i class="ti-plus text-right"></i>
+              </a>
+            </div>
+            <div id="accordion1" class="collapse" data-parent="#accordion">
+              <div class="card-body font-secondary text-color">- Industrie Lourde<p></p>- Ouvrage d’art<p></p>- Hydraulique
+                
+                </div>
+            </div>
+          </div>
+          <!-- accordion item -->
+          <div class="card mb-4 rounded-0 border-0">
+            <div class="card-header rounded-0 bg-white border p-0 border-0">
+              <a class="card-link h4 d-flex tex-dark mb-0 py-3 px-4 justify-content-between" data-toggle="collapse" href="#accordion2">
+                <span>Bâtiment</span> <i class="ti-plus text-right"></i>
+              </a>
+            </div>
+            <div id="accordion2" class="collapse" data-parent="#accordion">
+              <div class="card-body font-secondary text-color">- Environnement<p></p>- Industriels<p></p>- Tertiaires<p></p>- Maritime
+                
+                </div>
+            </div>
+          </div>
+          <!-- accordion item -->
+          <div class="card mb-4 rounded-0 border-0">
+            <div class="card-header rounded-0 bg-white border p-0 border-0">
+              <a class="card-link h4 d-flex tex-dark mb-0 py-3 px-4 justify-content-between" data-toggle="collapse" href="#accordion3">
+                <span>Ferrovière</span> <i class="ti-plus text-right"></i>
+              </a>
+            </div>
+            <div id="accordion3" class="collapse" data-parent="#accordion">
+              <div class="card-body font-secondary text-color">- Infrastructures<p></p>- Lourd (Ter, Tet, Tgv..)<p></p>- Gestionnaire<p></p>- Guidé Urbain (Tramway,
+                Metro…)
+                
+                </div>
+            </div>
+          </div>
+          <!-- accordion item -->
+          <div class="card mb-4 rounded-0 border-0">
+            <div class="card-header rounded-0 bg-white border p-0 border-0">
+              <a class="card-link h4 d-flex tex-dark mb-0 py-3 px-4 justify-content-between" data-toggle="collapse" href="#accordion4">
+                <span>Naval</span> <i class="ti-plus text-right"></i>
+              </a>
+            </div>
+            <div id="accordion4" class="collapse" data-parent="#accordion">
+              <div class="card-body font-secondary text-color">- Geotechnique<p></p>- Equipements<p></p>- Sous Marin<p></p>- Systemes
+                </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
--->
 
 <!-- team -->
 <section class="section">
   <div class="container">
     <div class="row">
       <div class="col-lg-10 mx-auto text-center">
-        <h2>Notre Entreprise</h2>
+        <h2>Projets</h2>
         <div class="section-border"></div>
-        <div class="col-lg-10 mx-auto text-md-left">
-        <p>Symetic Ing société d'assistance technique spécialisée dans la prestation pluridisciplinaire d’ingénierie en énergie et industrie. Nous avons choisi de nous concentrer sur ces secteurs pour lesquels nous avons un fort intérêt pour notre avenir.</p>
-        <p>De grands acteurs majeurs nous font confiance dans la gestion et la réalisation de leurs projets en France et à l’étranger. Nous accompagnons nos clients sur toutes les phases d’ingénieries du projet de la conception à la réalisation.</p>
-        <p>Nous mettons notre volonté et notre engagement au service de nos clients et de nos consultants avec le défi de proposer les solutions les plus adaptées. Notre réseau de consultants et partenaires nous a permis d’étendre nos connaissances et notre savoir-faire.</p>
-        <p>La communication et le partage profitent à la réussite de nos collaborateurs et à chacun d’entre nous pour atteindre ensemble un meilleur partenariat. Notre engagement repose sur le savoir-être et le savoir-faire en adéquation avec nos clients.</p>
-        <p>Nous portons un point d’honneur sur le respect et l’éthique des valeurs humaines.</p>
-        <p>Savoir comprendre, savoir s’adapter, savoir écouter sont nos priorités pour apporter notre confiance.</p>
-        </div>
       </div>
     </div>
-    
+    <div class="row no-gutters">
+      <div class="col-lg-3 col-sm-6">
+        <div class="card hover-shadow">
+          <img src="../images/team/portfolio-7.png" alt="team-member" class="card-img-top">
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="card hover-shadow">
+          <img src="../images/team/portfolio-9.png" alt="team-member" class="card-img-top">
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="card hover-shadow">
+          <img src="../images/team/portfolio-10.png" alt="team-member" class="card-img-top">
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="card hover-shadow">
+          <img src="../images/team/portfolio-12.jpg" alt="team-member" class="card-img-top">
+        </div>
+      </div>
     </div>
   </div>
 </section>
 <!-- /team -->
-
-<!-- call to action -->
-<section>
-  <div class="container section-sm overlay-secondary-half bg-cover" data-background="../images/backgrounds/lets-talk.png">
-  <div class="row">
-    <div class="col-lg-8 offset-lg-1">
-      <h2 class="text-gradient-primary">Commençons ensemble!</h2>
-      <p class="h4 font-weight-bold text-white mb-4">Posez-nous une question, nous sommes là pour vous aider</p>
-      <a href="/fr/contact" class="btn btn-lg btn-primary">Contact</a>
-    </div>
-  </div>
-</div>
-</section>
-<!-- /call to action -->
-<br>
-<br>
-<br>
 
 <!-- footer -->
 <!-- <footer class="bg-secondary position-relative">
@@ -487,7 +479,7 @@ h6 {
   </div>
 </footer> -->
 
-<%- include('partials/footerFR'); %>	
+<%- include('partials/footerFR'); %> 
 <!-- /footer -->
 
 <!-- jQuery -->

@@ -70,7 +70,7 @@ router.get("/", (req, res) => {
                 if(lang==="fr"){
                     url="/job-offers?lang=fr"
                 }
-              return res.status(200).render("jobOfferDetails",{ data:data ,moment: moment, no:colorList[data.category].no,url});
+              return res.status(200).render("career-details",{ data:data ,moment: moment, no:colorList[data.category].no,url,  user: req.session.user});
             }
         });
     }else{

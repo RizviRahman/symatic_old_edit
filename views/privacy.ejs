@@ -1,91 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
+
 <head>
-	<title>Symetic Ing - Privacy & Terms</title>
-	<link rel="icon" href="images/logoTitle.png" type="image/icon type">
-    <meta name="keywords" content="">
-	<meta name="description" content="">
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Symetic Ing | Privacy & Terms</title>
 
-	<!-- stylesheet css -->
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+  <!-- venobox css -->
+  <link rel="stylesheet" href="plugins/venobox/venobox.css">
+  <!-- card slider -->
+  <link rel="stylesheet" href="plugins/card-slider/css/style.css">
 
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/nivo-lightbox.css">
-	<link rel="stylesheet" href="css/nivo_themes/default/default.css">
-	<link rel="stylesheet" href="css/templatemo-style.css">
-	<link rel="stylesheet" href="css/menu.css">
-	<link rel="stylesheet" href="css/responsive.css">
-
-	<!-- google web font css -->
-	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-
-	<style>
-
-
-	* {
-		box-sizing: border-box;
-	  }
-	  
-	  body {
-		margin: 0;
-		font-family: Arial;
-		font-size: 17px;
-	  }
-	  
-	  #myVideo {
-		position: fixed;
-		right: 0;
-		bottom: -100px;
-		width: 1200px;
-		min-width: 100%; 
-		min-height: 100%;
-	  }
-	  
-	  .content {
-		position: fixed;
-		bottom: 0;
-		background: rgba(0, 0, 0, 0.5);
-		color: #f1f1f1;
-		width: 100%;
-		padding: 20px;
-	  }
-	
-</style>
+  <!-- Main Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+  
+  <!--Favicon-->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
 </head>
 <body>
 
-	<%- include('partials/nav', {user: user, opt: 'policy'}); %>  
+<header class="navigation fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="\"><img src="./images/1.png" alt="Company Logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+      aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-<!-- about section -->
+    <div class="collapse navbar-collapse text-center" id="navigation">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="\index">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="\about">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="\energy">Energy</a>
+            <a class="dropdown-item" href="\environment">Environment</a>
+            <a class="dropdown-item" href="\it">IT</a>
+            <a class="dropdown-item" href="\civil">Civil Infrastructure</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="\job-offers">Job Offers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="\contact">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="\login">Login</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
 
-<div id="about-header">
-	<div class="w3-container">
-		<div class="row">
-		
-			<div class="col-md-5 col-sm-3"></div>
 
-			<video autoplay muted loop id="myVideo">
-				<source src="images/video.mp4" type="video/mp4">
-				Your browser does not support HTML5 video.
-			  </video>
+<!-- page-title -->
+<section class="page-title bg-cover" data-background="images/backgrounds/page-title2.jpg">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="display-1 text-white font-weight-bold font-primary">Privacy & Terms</h1>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /page-title -->
+<section class="section bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div id="accordion">
+          <!-- accordion item -->
+          <div class="card mb-4 rounded-0 border-0">
+            <div class="card-header rounded-0 bg-white border p-0 border-0">
+              <a class="card-link h4 d-flex tex-dark mb-0 py-3 px-4 justify-content-between" data-toggle="collapse" href="#accordion1">
+                <span> Privacy & Terms</span> <i class="ti-plus text-right"></i>
+              </a>
+            </div>
+            <div id="accordion1" class="collapse" data-parent="#accordion">
 
-			  
-			  
-			  <script>
-			  var video = document.getElementById("myVideo");
-			  </script>
- 
- 
 
 
-	<div class="w3-container">
-		<div class="row">
-
-			<div class="col-md-offset-2 col-md-8 col-sm-12">
+              <div class="col-md-offset-2 col-md-8 col-sm-12">
 				<style>
 					[data-custom-class='body'], [data-custom-class='body'] * {
 							background: transparent !important;
@@ -93,25 +106,25 @@
 				  [data-custom-class='title'], [data-custom-class='title'] * {
 							font-family: Arial !important;
 				  font-size: 26px !important;
-				  color: #ffffff !important;
+				  color: #3b3a3a !important;
 						  }
 				  [data-custom-class='subtitle'], [data-custom-class='subtitle'] * {
 							font-family: Arial !important;
-				  color: #d8cbcb !important;
+				  color: #3b3a3a !important;
 				  font-size: 14px !important;
 						  }
 				  [data-custom-class='heading_1'], [data-custom-class='heading_1'] * {
 							font-family: Arial !important;
 				  font-size: 19px !important;
-				  color: #d8cbcb !important;
+				  color: #3b3a3a !important;
 						  }
 				  [data-custom-class='heading_2'], [data-custom-class='heading_2'] * {
 							font-family: Arial !important;
 				  font-size: 17px !important;
-				  color: #d8cbcb !important;
+				  color: #1d1b1b !important;
 						  }
 				  [data-custom-class='body_text'], [data-custom-class='body_text'] * {
-							color: #d8cbcb !important;
+							color: #000000 !important;
 				  font-size: 14px !important;
 				  font-family: Arial !important;
 						  }
@@ -139,24 +152,98 @@
 						}
 					  </style>
 						</div>
-						<div style="color: #595959;font-size: 14px;font-family: Arial;padding-top:16px;">
-						This privacy policy was created using Termly's <a style="color: rgb(48, 48, 241) !important;" href="https://termly.io/products/privacy-policy-generator/">Privacy Policy Generator</a>.
-						</div>
-			</div>
+           
+           
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-</div>
+<!-- footer -->
+<!-- <footer class="bg-secondary position-relative">
+  <img src="images/backgrounds/map.png" class="img-fluid overlay-image" alt="">
+  <div class="section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-3 col-6">
+          <h4 class="text-white mb-5">About</h4>
+          <ul class="list-unstyled">
+            <li><a href="career.html" class="text-light d-block mb-3">Job Offers</a></li>
+            <li><a href="contact.html" class="text-light d-block mb-3">Contact</a></li>
+            <li><a href="about.html" class="text-light d-block mb-3">About us</a></li>
+            <li><a href="privacy.html" class="text-light d-block mb-3">Privacy & Terms</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-6">
+          <h4 class="text-white mb-5">Company</h4>
+          <ul class="list-unstyled">
+            <li><a href="mailto:contact@symetic-ing.com" class="text-light d-block mb-3"><i class="ti-email"></i> contact@symetic-ing.com</a></li>
+            <li><a class="text-light d-block mb-3"><i class="ti-mobile"></i> +33 1 85 40 19 16</a></li>
+            <li><a href="https://symetic-ing.com" class="text-light d-block mb-3"><i class="ti-world"></i> www.symetic-ing.com</a></li>
+            <li><a class="text-light d-block mb-3"><i class="ti-map-alt"></i> 2 Rue des Commeres</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <div class="bg-white p-4">
+            <h3>Contact us</h3>
+            <form action="#">
+              <input type="text" id="name" name="name" class="form-control mb-4 px-0" placeholder="Full name">
+              <input type="text" id="name" name="name" class="form-control mb-4 px-0" placeholder="Email address">
+              <textarea name="message" id="message" class="form-control mb-4 px-0" placeholder="Message"></textarea>
+              <button class="btn btn-primary" type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pb-4">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-left">
+          <p class="text-light mb-0">Copyright &copy; 2022 Symetic Ing
+          </p>
+        </div>
+        <div class="col-md-6">
+          <ul class="list-inline text-md-right text-center">
+            <li class="list-inline-item"><a class="d-block p-3 text-white" href="#"><i class="ti-facebook"></i></a></li>
+            <li class="list-inline-item"><a class="d-block p-3 text-white" href="https://www.linkedin.com/company/symetic-ingenierie/"><i class="ti-linkedin"></i></a></li>
+            <li class="list-inline-item"><a class="d-block p-3 text-white" href="mailto:contact@symetic-ing.com"><i class="ti-email"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer> -->
 
+<%- include('partials/footer_n'); %>
+<!-- /footer -->
 
-	
-<%- include('partials/footer'); %>
+<!-- jQuery -->
+<script src="plugins/jQuery/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<!-- slick slider -->
+<script src="plugins/slick/slick.min.js"></script>
+<!-- venobox -->
+<script src="plugins/venobox/venobox.min.js"></script>
+<!-- shuffle -->
+<script src="plugins/shuffle/shuffle.min.js"></script>
+<!-- apear js -->
+<script src="plugins/counto/apear.js"></script>
+<!-- counter -->
+<script src="plugins/counto/counTo.js"></script>
+<!-- card slider -->
+<script src="plugins/card-slider/js/card-slider-min.js"></script>
+<!-- google map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"></script>
+<script src="plugins/google-map/gmap.js"></script>
 
-
-
-<!-- javascript js -->	
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>	
-<script src="js/nivo-lightbox.min.js"></script>
-<script src="js/custom.js"></script>
+<!-- Main Script -->
+<script src="js/script.js"></script>
 
 </body>
 </html>

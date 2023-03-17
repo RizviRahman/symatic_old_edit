@@ -1,4 +1,4 @@
-	
+<!-- 	
 	<div class="container">
 		<div class="navbar navbar-default navbar-static-top" role="navigation">
 			<ul class="nav navbar-nav navbar-left navbar-img nan_bar_mobile">
@@ -18,7 +18,7 @@
 				<li><a href="/fr/about" class="<%= (opt=='aboutFR'? 'active' : '')%>">NOTRE ENTREPRISE</a></li>
 				<li><a href="/job-offers?lang=fr">OFFRES D'EMPLOI</a></li>
 				<li><a href="/fr/contact"class="<%= (opt=='contactFR'? 'active' : '')%>">CONTACT</a></li>
-				<li><a href="/login">LOGIN</a></li>
+				<li><a href="/fr//login">LOGIN</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-left navbar-img">
 				<a href="/fr"><img src="../images/Symetic_inc.png"></a>
@@ -28,4 +28,65 @@
 		</div>
 	</div>
 </div>		
+   -->
+
+<header class="navigation fixed-top">
+	<nav class="navbar navbar-expand-lg navbar-dark">
+	  <a class="navbar-brand" href="/fr"><img src="../images/1.png" alt="Company Logo"></a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+		aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
   
+	  <div class="collapse navbar-collapse text-center" id="navigation">
+		<ul class="navbar-nav ml-auto">
+		  <li class="nav-item <%= (opt=='homeFR'? 'active' : '')%>">
+			<a class="nav-link" href="/fr">Accueil</a>
+		  </li>
+		  <li class="nav-item <%= (opt=='aboutFR'? 'active' : '')%>">
+			<a class="nav-link" href="/fr/about">Notre Entreprise</a>
+		  </li>
+		  <li class="nav-item dropdown <%= (opt=='categoryFR'? 'active' : '')%>">
+			<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catégories</a>
+			<div class="dropdown-menu">
+			  <a class="dropdown-item" href="/fr/energy">Énergie</a>
+			  <a class="dropdown-item" href="/fr/environment">Environnement</a>
+			  <a class="dropdown-item" href="/fr/it">IT</a>
+			  <a class="dropdown-item" href="/fr/civil">Infrastructure Civil</a>
+			</div>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="/job-offers?lang=fr">Offres D'Emploi</a>
+		  </li>
+		  <li class="nav-item <%= (opt=='contactFR'? 'active' : '')%>">
+			<a class="nav-link" href="/fr/contact">Contact</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="/fr/login">Login</a>
+		  </li>
+		  <li class="nav-item">
+			<header class="main-header">
+			  <div class="switch">
+				<div class="current">
+				  <span>FR</span>
+				  <em class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><title>ic_arrow_drop_down_18px</title>
+				<g fill="#FFFFFF">
+					<path d="M5 8l4 4 4-4z"></path>
+				</g>
+			</svg></em>
+				</div>
+				<div class="options">
+				  <ul class="options-list">
+					<li data-lang="fr">French</li>
+					<a href="/"><li data-lang="en">English</li></a>
+					<li data-lang="pt">Portuguese</li>
+				  </ul>
+				  <div id="trans-circle"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"> <g id="circle" fill="none" fill-rule="evenodd"> <circle id="bg" cx="60" cy="60" r="60" fill="#FFFFFF"/> </g> </svg>
+				</div>
+			  </div>
+			</header>
+		  </li>
+		</ul>
+	  </div>
+	</nav>
+  </header>
